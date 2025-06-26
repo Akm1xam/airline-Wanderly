@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderly – Путешествуй с вдохновением</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#hero" class="logo">Wanderly</a>
+                <ul class="nav-links">
+                    <li><a href="#destinations">Направления</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <button class="menu-toggle">☰</button>
+            </nav>
+            <div id="hero" class="hero">
+                <h1>Откройте мир с <span>Wanderly</span></h1>
+                <p>Идеальные путешествия для вашей души</p>
+                <a href="#search" class="btn">Найти тур</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="search" class="search-section">
+        <div class="container">
+            <h2>Найдите своё идеальное путешествие</h2>
+            <form class="search-form">
+                <input type="text" placeholder="Куда хотите поехать?">
+                <input type="date" placeholder="Дата вылета">
+                <input type="number" placeholder="Бюджет ($)">
+                <button type="submit" class="btn">Поиск</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Популярные направления</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="img/paris.jpg" alt="Париж">
+                    <h3>Париж</h3>
+                    <p>От €800</p>
+                </div>
+                <div class="card">
+                    <img src="img/tokyo.jpg" alt="Токио">
+                    <h3>Токио</h3>
+                    <p>От €1200</p>
+                </div>
+                <div class="card">
+                    <img src="img/bali.jpg" alt="Бали">
+                    <h3>Бали</h3>
+                    <p>От €900</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Почему Wanderly?</h2>
+            <div class="features">
+                <div class="feature">
+                    <span>✈️</span>
+                    <h3>Лучшие цены</h3>
+                    <p>Гарантируем самые выгодные предложения.</p>
+                </div>
+                <div class="feature">
+                    <span>🌍</span>
+                    <h3>Уникальные маршруты</h3>
+                    <p>Только проверенные локации.</p>
+                </div>
+                <div class="feature">
+                    <span>🛎️</span>
+                    <h3>24/7 Поддержка</h3>
+                    <p>Мы всегда на связи.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="map" class="map-section">
+        <div class="container">
+            <h2>Наши направления на карте</h2>
+            <div id="travel-map"></div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>Отзывы</h2>
+            <div class="review-slider">
+                <div class="review">
+                    <p>"Отличный сервис! Всё организовано идеально."</p>
+                    <h4>— Алина</h4>
+                </div>
+                <div class="review">
+                    <p>"Лучшее путешествие в моей жизни! Спасибо Wanderly!"</p>
+                    <h4>— Максим</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Wanderly</h3>
+                    <p>Путешествуйте с удовольствием.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Контакты</h3>
+                    <p>📞 +7 (123) 456-78-90</p>
+                    <p>✉️ hello@wanderly.com</p>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Wanderly. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
