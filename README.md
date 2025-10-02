@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/22665391/README.md)
 # ✈️ Wanderly - Премиальные авиаперелеты
 
 <div align="center">
