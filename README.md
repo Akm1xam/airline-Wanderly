@@ -1,8 +1,6 @@
 [README.md](https://github.com/user-attachments/files/22665391/README.md)
 # ✈️ Wanderly - Премиальные авиаперелеты
 
-![Wanderly Banner](https://via.placeholder.com/1200x400/2563eb/ffffff?text=Wanderly+-+Премиальные+авиаперелеты)
-
 <div align="center">
 
 **Мечтайте • Путешествуйте • Открывайте**
