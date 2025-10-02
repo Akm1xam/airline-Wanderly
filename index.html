@@ -3,131 +3,631 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanderly – Путешествуй с вдохновением</title>
+    <title>Wanderly - Премиальные авиаперелеты</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#hero" class="logo">Wanderly</a>
-                <ul class="nav-links">
-                    <li><a href="#destinations">Направления</a></li>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#reviews">Отзывы</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-                <button class="menu-toggle">☰</button>
-            </nav>
-            <div id="hero" class="hero">
-                <h1>Откройте мир с <span>Wanderly</span></h1>
-                <p>Идеальные путешествия для вашей души</p>
-                <a href="#search" class="btn">Найти тур</a>
-            </div>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="clouds-container">
+            <div class="cloud-layer cloud-layer-1"></div>
+            <div class="cloud-layer cloud-layer-2"></div>
+            <div class="cloud-layer cloud-layer-3"></div>
         </div>
+        <div class="loader-content">
+            <div class="plane-loader">
+                <i class="fas fa-plane"></i>
+            </div>
+            <div class="loading-text">
+                <span class="letter">W</span>
+                <span class="letter">a</span>
+                <span class="letter">n</span>
+                <span class="letter">d</span>
+                <span class="letter">e</span>
+                <span class="letter">r</span>
+                <span class="letter">l</span>
+                <span class="letter">y</span>
+            </div>
+            <div class="loading-subtitle">Поднимаемся выше облаков</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h2>Wanderly</h2>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Главная</a></li>
+                <li><a href="#routes" class="nav-link">Маршруты</a></li>
+                <li><a href="#features" class="nav-link">Преимущества</a></li>
+                <li><a href="#fleet" class="nav-link">Наш флот</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-login">
+                    <i class="fas fa-user"></i>
+                    Войти
+                </button>
+                <button class="btn-primary">
+                    <i class="fas fa-ticket-alt"></i>
+                    Забронировать
+                </button>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
     </header>
 
-    <section id="search" class="search-section">
-        <div class="container">
-            <h2>Найдите своё идеальное путешествие</h2>
-            <form class="search-form">
-                <input type="text" placeholder="Куда хотите поехать?">
-                <input type="date" placeholder="Дата вылета">
-                <input type="number" placeholder="Бюджет ($)">
-                <button type="submit" class="btn">Поиск</button>
-            </form>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="sky-animation">
+                <div class="sun"></div>
+                <div class="cloud-parallax">
+                    <div class="cloud cloud-1"></div>
+                    <div class="cloud cloud-2"></div>
+                    <div class="cloud cloud-3"></div>
+                    <div class="cloud cloud-4"></div>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <section id="destinations" class="destinations">
+        
         <div class="container">
-            <h2>Популярные направления</h2>
-            <div class="grid">
-                <div class="card">
-                    <img src="img/paris.jpg" alt="Париж">
-                    <h3>Париж</h3>
-                    <p>От €800</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">
+                        <i class="fas fa-crown"></i>
+                        Премиальные перелеты
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Мечтайте</span>
+                        <span class="title-line highlight">Путешествуйте</span>
+                        <span class="title-line">Открывайте</span>
+                    </h1>
+                    <p class="hero-subtitle">Wanderly - это не просто перелет, это начало вашего приключения. Наслаждайтесь высочайшим уровнем комфорта и сервиса на борту наших современных лайнеров.</p>
+                    
+                    <div class="hero-actions">
+                        <button class="btn-primary btn-large">
+                            <i class="fas fa-search"></i>
+                            Найти рейс
+                        </button>
+                        <button class="btn-secondary btn-large">
+                            <i class="fas fa-play-circle"></i>
+                            Виртуальный тур
+                        </button>
+                    </div>
+
+                    <div class="hero-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Бесплатная отмена за 24 часа</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Премиальное питание</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Wi-Fi на всех рейсах</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="img/tokyo.jpg" alt="Токио">
-                    <h3>Токио</h3>
-                    <p>От €1200</p>
-                </div>
-                <div class="card">
-                    <img src="img/bali.jpg" alt="Бали">
-                    <h3>Бали</h3>
-                    <p>От €900</p>
+
+                <div class="hero-visual">
+                    <div class="main-plane">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="flight-path"></div>
+                    
+                    <div class="destination-cards">
+                        <div class="dest-card" data-dest="paris">
+                            <div class="dest-image">
+                                <i class="fas fa-eiffel-tower"></i>
+                            </div>
+                            <div class="dest-content">
+                                <h4>Париж</h4>
+                                <p>от 15 000 ₽</p>
+                                <div class="dest-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dest-card" data-dest="newyork">
+                            <div class="dest-image">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="dest-content">
+                                <h4>Нью-Йорк</h4>
+                                <p>от 35 000 ₽</p>
+                                <div class="dest-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dest-card" data-dest="tokyo">
+                            <div class="dest-image">
+                                <i class="fas fa-torii-gate"></i>
+                            </div>
+                            <div class="dest-content">
+                                <h4>Токио</h4>
+                                <p>от 28 000 ₽</p>
+                                <div class="dest-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
+    <!-- Stats Section -->
+    <section class="stats">
         <div class="container">
-            <h2>Почему Wanderly?</h2>
-            <div class="features">
-                <div class="feature">
-                    <span>✈️</span>
-                    <h3>Лучшие цены</h3>
-                    <p>Гарантируем самые выгодные предложения.</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>50+</h3>
+                        <p>Направлений по всему миру</p>
+                    </div>
                 </div>
-                <div class="feature">
-                    <span>🌍</span>
-                    <h3>Уникальные маршруты</h3>
-                    <p>Только проверенные локации.</p>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>1M+</h3>
+                        <p>Довольных пассажиров</p>
+                    </div>
                 </div>
-                <div class="feature">
-                    <span>🛎️</span>
-                    <h3>24/7 Поддержка</h3>
-                    <p>Мы всегда на связи.</p>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>99.8%</h3>
+                        <p>Пунктуальность рейсов</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>100%</h3>
+                        <p>Безопасность полетов</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="map" class="map-section">
+    <!-- Routes Section -->
+    <section id="routes" class="routes">
         <div class="container">
-            <h2>Наши направления на карте</h2>
-            <div id="travel-map"></div>
-        </div>
-    </section>
+            <div class="section-header">
+                <div class="section-badge">Маршруты</div>
+                <h2 class="section-title">Популярные направления</h2>
+                <p class="section-subtitle">Откройте для себя лучшие города мира с нашими эксклюзивными маршрутами</p>
+            </div>
+            
+            <div class="routes-content">
+                <div class="routes-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Поиск направления..." class="search-input">
+                    </div>
+                    
+                    <div class="route-filters">
+                        <button class="filter-btn active" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="europe">Европа</button>
+                        <button class="filter-btn" data-filter="asia">Азия</button>
+                        <button class="filter-btn" data-filter="america">Америка</button>
+                        <button class="filter-btn" data-filter="exotic">Экзотика</button>
+                    </div>
 
-    <section id="reviews" class="reviews">
-        <div class="container">
-            <h2>Отзывы</h2>
-            <div class="review-slider">
-                <div class="review">
-                    <p>"Отличный сервис! Всё организовано идеально."</p>
-                    <h4>— Алина</h4>
+                    <div class="routes-list">
+                        <div class="route-item active" data-city="moscow" data-filter="europe">
+                            <div class="route-main">
+                                <div class="route-icon">
+                                    <i class="fas fa-plane-departure"></i>
+                                </div>
+                                <div class="route-info">
+                                    <h4>Москва → Париж</h4>
+                                    <div class="route-meta">
+                                        <span class="duration"><i class="fas fa-clock"></i> 3ч 45м</span>
+                                        <span class="type"><i class="fas fa-plane"></i> Прямой рейс</span>
+                                    </div>
+                                </div>
+                                <div class="route-price">
+                                    <div class="price">от 15 000 ₽</div>
+                                    <button class="btn-book">Выбрать</button>
+                                </div>
+                            </div>
+                            <div class="route-details">
+                                <div class="detail">
+                                    <i class="fas fa-wifi"></i>
+                                    <span>Wi-Fi</span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-utensils"></i>
+                                    <span>Питание</span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-tv"></i>
+                                    <span>Развлечения</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="route-item" data-city="london" data-filter="europe">
+                            <div class="route-main">
+                                <div class="route-icon">
+                                    <i class="fas fa-plane-departure"></i>
+                                </div>
+                                <div class="route-info">
+                                    <h4>Лондон → Нью-Йорк</h4>
+                                    <div class="route-meta">
+                                        <span class="duration"><i class="fas fa-clock"></i> 7ч 30м</span>
+                                        <span class="type"><i class="fas fa-plane"></i> Прямой рейс</span>
+                                    </div>
+                                </div>
+                                <div class="route-price">
+                                    <div class="price">от 35 000 ₽</div>
+                                    <button class="btn-book">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="route-item" data-city="tokyo" data-filter="asia">
+                            <div class="route-main">
+                                <div class="route-icon">
+                                    <i class="fas fa-plane-departure"></i>
+                                </div>
+                                <div class="route-info">
+                                    <h4>Токио → Сингапур</h4>
+                                    <div class="route-meta">
+                                        <span class="duration"><i class="fas fa-clock"></i> 6ч 15м</span>
+                                        <span class="type"><i class="fas fa-couch"></i> Комфорт</span>
+                                    </div>
+                                </div>
+                                <div class="route-price">
+                                    <div class="price">от 28 000 ₽</div>
+                                    <button class="btn-book">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="route-item" data-city="dubai" data-filter="exotic">
+                            <div class="route-main">
+                                <div class="route-icon">
+                                    <i class="fas fa-plane-departure"></i>
+                                </div>
+                                <div class="route-info">
+                                    <h4>Дубай → Бали</h4>
+                                    <div class="route-meta">
+                                        <span class="duration"><i class="fas fa-clock"></i> 8ч 20м</span>
+                                        <span class="type"><i class="fas fa-umbrella-beach"></i> Отдых</span>
+                                    </div>
+                                </div>
+                                <div class="route-price">
+                                    <div class="price">от 42 000 ₽</div>
+                                    <button class="btn-book">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="review">
-                    <p>"Лучшее путешествие в моей жизни! Спасибо Wanderly!"</p>
-                    <h4>— Максим</h4>
+
+                <div class="routes-map">
+                    <div id="map" class="map-container"></div>
+                    <div class="map-controls">
+                        <div class="map-legend">
+                            <div class="legend-item">
+                                <div class="legend-color departure"></div>
+                                <span>Вылет</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color arrival"></div>
+                                <span>Прибытие</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Преимущества</div>
+                <h2 class="section-title">Почему выбирают Wanderly</h2>
+                <p class="section-subtitle">Незабываемый опыт полета с премиальным сервисом на каждом этапе путешествия</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Премиум комфорт</h3>
+                    <p>Просторные креся с увеличенным шагом, регулируемые подголовники и индивидуальное освещение для максимального расслабления</p>
+                    <div class="feature-link">
+                        <span>Узнать больше</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Wi-Fi на борту</h3>
+                    <p>Бесплатный высокоскоростной интернет во время всего полета для работы, общения и развлечений</p>
+                    <div class="feature-link">
+                        <span>Узнать больше</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Гастрономия</h3>
+                    <p>Блюда от звездных шеф-поваров с возможностью выбора меню перед полетом и специальные диетические опции</p>
+                    <div class="feature-link">
+                        <span>Узнать больше</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Безопасность</h3>
+                    <p>Современные самолеты последнего поколения и опытные пилоты с многолетним стажем и регулярной подготовкой</p>
+                    <div class="feature-link">
+                        <span>Узнать больше</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Развлечения</h3>
+                    <p>Персональные экраны с фильмами, сериалами, музыкой и играми на всех языках мира</p>
+                    <div class="feature-link">
+                        <span>Узнать больше</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Забота о вас</h3>
+                    <p>Внимательный и профессиональный экипаж, готовый помочь в любой ситуации и создать атмосферу домашнего уюта</p>
+                    <div class="feature-link">
+                        <span>Узнать больше</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="fleet">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Флот</div>
+                <h2 class="section-title">Современные самолеты</h2>
+                <p class="section-subtitle">Летайте на самых современных и экологичных лайнерах</p>
+            </div>
+
+            <div class="fleet-slider">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <div class="slide active">
+                            <div class="aircraft-card">
+                                <div class="aircraft-image">
+                                    <i class="fas fa-plane"></i>
+                                </div>
+                                <div class="aircraft-info">
+                                    <h3>Airbus A350-900</h3>
+                                    <p>Самый современный и экологичный широкофюзеляжный самолет</p>
+                                    <div class="aircraft-specs">
+                                        <div class="spec">
+                                            <i class="fas fa-users"></i>
+                                            <span>325 пассажиров</span>
+                                        </div>
+                                        <div class="spec">
+                                            <i class="fas fa-road"></i>
+                                            <span>15,000 км</span>
+                                        </div>
+                                        <div class="spec">
+                                            <i class="fas fa-leaf"></i>
+                                            <span>-25% выбросов</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Готовы к путешествию?</h2>
+                    <p>Присоединяйтесь к миллионам довольных пассажиров по всему миру. Начните свое приключение прямо сейчас!</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large">
+                        <i class="fas fa-plane"></i>
+                        Забронировать рейс
+                    </button>
+                    <button class="btn-secondary btn-large">
+                        <i class="fas fa-download"></i>
+                        Скачать приложение
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Wanderly</h3>
-                    <p>Путешествуйте с удовольствием.</p>
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h3>Wanderly</h3>
+                    </div>
+                    <p>Открываем мир для вас с 2010 года. Безопасные, комфортные и незабываемые путешествия на высшем уровне.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h3>Контакты</h3>
-                    <p>📞 +7 (123) 456-78-90</p>
-                    <p>✉️ hello@wanderly.com</p>
+                
+                <div class="footer-section">
+                    <h4>Направления</h4>
+                    <ul>
+                        <li><a href="#">Европа</a></li>
+                        <li><a href="#">Азия</a></li>
+                        <li><a href="#">Северная Америка</a></li>
+                        <li><a href="#">Южная Америка</a></li>
+                        <li><a href="#">Африка</a></li>
+                        <li><a href="#">Океания</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Компания</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Карьера</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Устойчивое развитие</a></li>
+                        <li><a href="#">Инвесторы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="#">Помощь</a></li>
+                        <li><a href="#">Управление бронированием</a></li>
+                        <li><a href="#">Багаж</a></li>
+                        <li><a href="#">Отмена рейса</a></li>
+                        <li><a href="#">Частые вопросы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (495) 123-45-67</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@wanderly.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Москва, ул. Авиационная, 15</span>
+                        </div>
+                    </div>
+                    <div class="newsletter">
+                        <h5>Подписка на новости</h5>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Ваш email">
+                            <button class="btn-subscribe">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p class="copyright">© 2025 Wanderly. Все права защищены.</p>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Wanderly Airlines. Все права защищены.</p>
+                    <div class="footer-links">
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Условия использования</a>
+                        <a href="#">Карта сайта</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=your_api_key&lang=ru_RU" type="text/javascript"></script>
     <script src="script.js"></script>
 </body>
 </html>
