@@ -224,4 +224,3 @@ wanderly-airlines/
 - [Yandex.Maps API](https://yandex.ru/dev/maps/) за прекрасные карты
 - [Font Awesome](https://fontawesome.com) за иконки
 - [Google Fonts](https://fonts.google.com) за шрифты
-- Сообщество разработчиков за вдохновение
